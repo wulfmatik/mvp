@@ -1,11 +1,12 @@
 import React from 'react';
 import { GrSearch } from 'react-icons/gr';
+import css from '/styles.css';
 
 class Search extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      query: '';
+      query: ''
     }
     this.onChange = this.handleInputChange.bind(this);
     this.search = this.search.bind(this);
@@ -26,16 +27,17 @@ class Search extends React.Component {
 
   render() {
     return (
-    <div className="searchForm">
+    <div className="search-bar">
     <form>
       <input
-        placeholder="Search for..."
+        placeholder="Search"
         value={this.state.query}
         onChange={this.handleInputChange}
       />
-    <h4><GrSearch/></h4>
     </form>
     </div>
     )
   }
 }
+
+export default Search;
