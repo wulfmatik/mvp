@@ -36,6 +36,6 @@ class Search extends React.Component {
     <h4><GrSearch/></h4>
     </form>
     </div>
-    );
+    )
   }
 }
