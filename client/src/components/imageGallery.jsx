@@ -4,7 +4,8 @@ const ImageGallery = (props) => (
   <div className="image-gallery">
     {
       props.images.map((image, index) => (
-        <img key={index} src={image} />
+        <img style={{width: '300px',
+          height: '400px'}} key={index} src={image} />
       ))
     }
   </div>
