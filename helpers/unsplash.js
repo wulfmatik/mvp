@@ -9,16 +9,10 @@ let getPhotosQuery = (query) => {
     var imagesArray = [];
 
     data.data.results.forEach((image) => {
-      var imageStore = {
-        imageId: image.id,
-        name: image.user.name,
-        url: image.urls.small,
-        category: query
-      }
-      imagesArray.push(imageStore)
+      imagesArray.push(image.urls.small)
     });
 
-    return imagesArray;
+    this.setState({ images: imagesArray });
   })
   .catch(err => {
     console.log('Error happened during fetching!', err);

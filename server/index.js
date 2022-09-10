@@ -12,12 +12,12 @@ app.use(function(req, res, next) {
 });
 
 app.post('/photos', (req, res) => {
-  console.log(req)
-  unsplash.getPhotosQuery(req.body)
-    .then((response) => {
-      db.save(response)
-      .then(res.send('images saved'));
-    })
+  // console.log(req)
+  // unsplash.getPhotosQuery(req.body)
+  //   .then((response) => {
+  //     db.save(response)
+  //     .then(res.send('images saved'));
+  //   })
 });
 
 app.get('/photos', (req, res) => {

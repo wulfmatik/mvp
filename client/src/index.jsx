@@ -13,70 +13,51 @@ class App extends React.Component {
     }
     this.componentDidMount = this.componentDidMount.bind(this);
     this.search = this.search.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentDidMount() {
-    // $.ajax('http://localhost:3000/photos')
-    //   .then((data) => {
-    //     this.setState({ images: data });
-    //   });
-    // let requestURL = 'https://picsum.photos/v2/list';
-
-    // return fetch(requestURL)
-    // .then((response) => response.json())
-    // .then((data) => {
-    //   var results = [];
-    //   data.forEach((image) => {
-    //     results.push(image.download_url)
-    //   })
-    //   this.setState({images: results});
-    //   console.log(this.state)
-    // });
-    // $.ajax({
-    //   type: 'POST',
-    //   url: 'http://localhost:3000/photos',
-    //   contentType: "application/json; charset=utf-8",
-    //   sucess: () => {
-    //     $.ajax('http://localhost:3000/photos')
-    //       .then((data) => {
-    //         this.setState({ images: data });
-    //       })
-    //   }
-    // });
-    // this.search();
+    $.ajax('http://localhost:3000/photos')
+      .then((data) => {
+        this.setState({ images: data });
+      });
   }
 
   search(query) {
     console.log(`${query} was searched`);
-    // axios.get(`https://api.unsplash.com/search/photos/?query=${query}&client_id=XNm1RszcRDVanNi1WIlCv706rYZQaTDiqNChin0xavc`)
-    // .then(data => {
-    //   var imagesArray = [];
-    //   data.data.results.forEach((image) => {
-    //     imagesArray.push(image.urls.small)
-    //   });
 
-    //   this.setState({ images: imagesArray });
-    // })
-    // .catch(err => {
-    //   console.log('Error happened during fetching!', err);
-    // });
-    $.ajax({
+    axios.get(`https://api.unsplash.com/search/photos/?query=${query}&client_id=XNm1RszcRDVanNi1WIlCv706rYZQaTDiqNChin0xavc`)
+    .then(data => {
+      var imagesArray = [];
+      data.data.results.forEach((image) => {
+        imagesArray.push(image.urls.small)
+      });
+
+      this.setState({ images: imagesArray });
+    })
+    .then($.ajax({
       type: 'POST',
       url: 'http://localhost:3000/photos',
       contentType: "application/json; charset=utf-8",
       sucess: () => {
-        $.ajax('http://localhost:3000/photos')
-          .then((data) => {
-            this.setState({ images: data });
-          })
+        console.log('Stored Images!');
       }
+    }))
+    .catch(err => {
+      console.log('Error happened during fetching!', err);
     });
+
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+    console.log('we are here');
   }
 
   render() {
     return (<div>
-      <h1 style={{'textAlign': 'center', color: 'white'}}>Photos by Humans</h1>
-      <Search onSearch={this.search.bind(this)}/>
+      <h1 style={{'textAlign': 'center', color: 'white'}}>Images by Humans</h1>
+      <Search onSearch={this.search.bind(this)} images={this.state.images}/>
       <ImageGallery images={this.state.images}/>
     </div>)
   }

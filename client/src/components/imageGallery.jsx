@@ -5,7 +5,8 @@ const ImageGallery = (props) => (
     {
       props.images.map((image, index) => (
         <img style={{width: '300px',
-          height: '400px'}} key={index} src={image} />
+          height: '400px',
+          justifyContent: 'center'}} key={index} src={image} />
       ))
     }
   </div>

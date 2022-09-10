@@ -19,7 +19,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Heading ##
   > Name the product in a way the reader (i.e. your target customers) will understand.
 
-  Art by Humans
+  Images by Humans
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
@@ -34,7 +34,7 @@ Once the project moves into development, the press release can be used as a touc
 ## Problem ##
   > Describe the problem your product solves.
 
-  Google search often gives results of questionable quality when it comes to looking at art and with the rise of AI art, this problem only gets worse. Am I looking at a true digital copy of the Mona Lisa? Or is it nothing more than
+  Google search often gives results of questionable quality when it comes to looking at art and with the rise of AI art and photos, this problem only gets worse. Am I looking at a true digital copy of the Mona Lisa? Or is it nothing more than
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
@@ -59,4 +59,4 @@ Once the project moves into development, the press release can be used as a touc
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
 
-  Human artistic expression through drawing and painting is a fundamental part of our species and up until now has been unique in the known universe. The machines threaten this core element of humanity and this application may be the last best hope for our future. You, dear reader, must now go to SF MOMA, or the Louvre, or whatever local human-based art museum near you to keep the dream of human art alive. If those aren't available near you, convientetly go to artbyhumans.com.
+  Human artistic expression through drawing and painting is a fundamental part of our species and up until now has been unique in the known universe. The machines threaten this core element of humanity and this application may be the last best hope for our future. You, dear reader, must now go to SF MOMA, or the Louvre, or whatever local human-based art museum near you to keep the dream of human art alive. If those aren't available near you, convientetly go to our (future deployed) website.
